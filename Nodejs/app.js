@@ -11,6 +11,8 @@ client.connect(PORT, HOST, function () {
     // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client 
     const startByte = Buffer.alloc(1, 0x02)
     const endByte = Buffer.alloc(1, 0x03)
+
+    // REMOTE UNLOCK DOOR "0101" by "ADMIN"
     const buf = Buffer.from('9800O|R0101|UAdmin', "ascii")
 
     const send = Buffer.concat([startByte, buf, endByte])
