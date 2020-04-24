@@ -33,7 +33,7 @@ namespace ConsoleApp3
                 ////// PREAPARE THE DATA
 
                 var name = "GUEST1";
-                var mobile = "+61431473207"; //Must be in real mobile number format.
+                var mobile = "+61411222333"; //Must be in real mobile number format.
                 var startDateTime = "200212152100";
                 var endDateTime = "200212302100";
                 var room = "0101"; // Must be same room number as in Lock-S Software
