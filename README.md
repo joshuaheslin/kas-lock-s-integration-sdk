@@ -1,4 +1,6 @@
-Setup steps:
+Use the following steps to get starting with building an integration with KAS Lock-S Software.
+
+Before you start:
 
 1. Install the latest version of Lock-S Software
 2. Install the latest version of PMS Server
