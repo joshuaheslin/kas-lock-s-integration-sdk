@@ -11,7 +11,7 @@ Before you start:
 
 Now you can start the integration
 
-1. Connect to PMS Server by TCP/IP through 127.0.0.1 and port 10003 (See code examples)
+1. Connect to PMS Server by TCP/IP through what host it is running on (such as 172.20.10.7) and port 10003 (See code examples)
 2. Observe the PMS server commands and conduct the Remote Unlock command you did in above steps
 3. Replicate this command to remote unlock the door through your TCP/IP integration. Notice the ’R’ to signify room number (see documentation). R0101A means Room “0101A”. The room number is a string and the same as you set in above steps
 4. Follow documentation on the additional commands and response acknowledgments
