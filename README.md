@@ -2,6 +2,11 @@ Use the following steps to get starting with building an integration with KAS Lo
 
 #### Before you start:
 
+[Contact KAS](https://www.kas.com.au) to order your demo locks for development. You will also need a license key and software download.
+
+
+#### Setup the equipment:
+
 [Setup the development environment](/INTEGRATION-PACK/Docs/Development-environment-setup.docx)
 
 1. Install the latest version of Lock-S Software
