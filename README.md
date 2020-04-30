@@ -2,7 +2,7 @@ Use the following steps to get starting with building an integration with KAS Lo
 
 #### Before you start:
 
-[Contact KAS](https://www.kas.com.au) to order your demo locks for development. You will also need a license key and software download link.
+[Contact KAS](https://www.kas.com.au) to order your demo locks for development. You will also need a license key and software download link from KAS.
 
 
 #### Setup the equipment:
