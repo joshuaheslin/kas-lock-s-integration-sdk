@@ -24,6 +24,7 @@ Use the following steps to get started with building an integration with KAS Loc
 4. Follow documentation on the [additional commands](/INTEGRATION-PACK/Docs) and response acknowledgments.
 5. [node.js sample code](/Nodejs)
 6. [C# sample code](/ConsoleApp3)
+7. OR [Cloud PMS SDK](#pms-sdk)
 
 #### [Optional] RFID card integrations
 
@@ -70,6 +71,6 @@ End of instructions to build your own TCP/IP connection interface to Lock-S Soft
 
 <hr>
 
-## *NEW* PMS-SDK Cloud Connector App:
+## <a name="pms-sdk"></a> PMS-SDK Cloud Connector App:
 
 Want an easier way to integrate with Lock-S Software? Continue reading...
