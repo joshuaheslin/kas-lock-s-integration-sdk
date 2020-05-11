@@ -77,25 +77,25 @@ Want an easier way to integrate with Lock-S Software? Continue reading...
 
 The Cloud PMS SDK is an cloud connector between your application and the PMS Server. It means you can open a secure websocket from anywhere and communicate with PMS Server over Websockets. 
 
-It acts as a live relay service or proxy which takes out the TCP/IP socket burden and you can just developer directly against a websocket from anywhere.
+It acts as a live relay service or proxy which takes out the TCP/IP socket burden and then you can just start developing directly against a websocket from anywhere.
 
 
 ### FAQS
 
 #### What is the pain point?
 
-- Your solution is in the cloud and how do you keep track of customers Public IP, port forwarding details etc to open a connection with the PMS Server? 
-- Don't have access to the customer private network settings, so I can't setup any port forward rules
+- Your solution is in the cloud and how do you keep track of customers Public IP, port forwarding details to open a connection with the PMS Server? 
+- Don't have access to the customer private network settings, so you can't setup any port forward rules
 - I don't have time to build and deploy a local PC application to connect to PMS Server which polls back to my own HTTP service. 
 
 #### What is it good for?
 
-- Integrations which are cloud based and have no private networking layers or access to modify these layers
+- Integrations which are cloud based and have no private networking layers or access to modify/retrieve customer network settings where the Lock Software is installed.
 
 
 #### What is it bad for?
 
-- If you are good at building a local PC application, consider this approach instead. This will save on your Cloud PMS SDK subscriptions fees/costs.
+- If you are good at building a local PC application, consider doing that instead of setting up Cloud PMS SDK. This will save on your Cloud PMS SDK subscriptions fees/costs.
 
 - If you have good control of customers networking and can easily use port forwarding, consider the port forwarding approach instead.
 
@@ -106,8 +106,8 @@ It acts as a live relay service or proxy which takes out the TCP/IP socket burde
 ### Diagram
 
 - The solution has two moving parts:
-  1) Cloud PMS SDK App - Local PC Application which connects to PMS Server and forwards/receives all TCP/IP traffic that is receives from the Web Socket Api.
-  2) Web Socket Api - a cloud hosted infrastructure which connects your application and proxies all requests to Cloud PMS SDK App and PMS Server.
+  1) Cloud PMS SDK App - Local PC Application which connects to PMS Server and forwards/receives all TCP/IP traffic that it receives from the Web Socket API. Note: it must be running at all times otherwise solution will fall over.
+  2) Web Socket API - a cloud hosted infrastructure which connects your application and proxies all requests to Cloud PMS SDK App and PMS Server.
 
 ![](images/pms2.png)
 
@@ -130,10 +130,10 @@ Connected (press CTRL+C to quit)
 > <read_response_here>
 
 < { "action": "SendMessage", "data": "9800O|R0102|UAdmin" }
-< 00980|J{“ack”:0,”cmdId”:”5dasdfxxxx”}
+> 00980|J{“ack”:0,”cmdId”:”5dasdfxxxx”}
 
 < { "action": "SendMessage", "data": "9800C|R0103|UBill" }
-< 00980|J{“ack”:0,”cmdId”:”5dasdfxxxx”}
+> 00980|J{“ack”:0,”cmdId”:”5dasdfxxxx”}
 
 > Connection timeout
 ```
@@ -144,7 +144,7 @@ Connected (press CTRL+C to quit)
 
       `data` : this is the TCP/IP data that the PMS Server expects. See documentation for what to use here.
 
-3) The connection will timeout after 10mins automatically. Ensure to reconnect everytime you go to make the command.
+3) The connection will timeout after 10mins automatically. Ensure to reconnect everytime you go to make a new command.
 
 ### Sample Commands
 
