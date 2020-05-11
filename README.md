@@ -36,7 +36,7 @@ Use the following steps to get started with building an integration with KAS Loc
 
 #### Overview Block Diagram:
 
-
+![](images/pms1.png)
 
 
 #### Notes:
@@ -67,10 +67,90 @@ Use the following steps to get started with building an integration with KAS Loc
 
 #### Final words
 
-This is the end of the instructions to build your *own* TCP/IP connection interface to Lock-S Software. If you want to just use a [Cloud PMS SDK](#pms-sdk).
+This is the end of the instructions to build your *own* TCP/IP connection interface to Lock-S Software. If you want to connect to the application but not build a TCP/IP interface, just use the [Cloud PMS SDK](#pms-sdk).
 
 <hr>
 
 ## <a name="pms-sdk"></a> Cloud PMS SDK
 
-Want an easier way to integrate with Lock-S Software? We've come up with the Cloud PMS SDK. Continue reading...
+Want an easier way to integrate with Lock-S Software? Continue reading...
+
+The Cloud PMS SDK is an cloud connector between your application and the PMS Server. It means you can open a secure websocket from anywhere and communicate with PMS Server over TCP/IP.
+
+
+### FAQS
+
+#### What is the pain point?
+
+- Your solution is in the cloud and how do you keep track of customers Public IP, port forwarding details etc to open a connection with the PMS Server? 
+  - Now you don't have to
+- I have to build a local PC application to connect to PMS which polls back to my own HTTP service. 
+  - Now you don't have to
+
+#### What is it good for?
+
+- Integrations which are cloud based and have no private networking layers
+
+
+#### What is it bad for?
+
+- If you are good at local PC application building, consider this approach instead to save subscription fees.
+
+- If you have good control of a customers networking and can easy use port forwarding, consider the port forwarding approach instead.
+
+#### Why does it cost money?
+
+- The solution is hosting the web socket API so theres an ongoing cloud hosting fee. This hosting is necessary to complete the entire SDK solution to make it easier for the integrator.
+
+### Diagram
+
+- The solution has two moving parts:
+  1) Cloud PMS SDK App - Local PC Application which connects to PMS Server and forwards/receives all TCP/IP traffic
+  2) Web Socket Api - a cloud hosted infrastructure which connects your application to the Cloud PMS SDK App.
+
+![](images/pms2.png)
+
+### Pricing
+
+Production: a monthly fee which is paid by the hotel/customer.
+
+Developers: No cost at all. Note: after 30 days of inactivity, the solution infrastructure will be teared down.
+
+
+### Sample requests
+
+1) Connect to websocket. Example shows connecting by command line but in practise it would be done by your server/browser.
+
+```
+$ wscat -c ws://echo.websocket.org
+Connected (press CTRL+C to quit)
+
+< { "action": "SendMessage", "data": "<write_data_here>" }
+> <read_response_here>
+
+< { "action": "SendMessage", "data": "9800O|R0102|UAdmin" }
+< 00980|J{“ack”:0,”cmdId”:”5dasdfxxxx”
+
+< { "action": "SendMessage", "data": "9800C|R0103|UBill" }
+< 00980|J{“ack”:0,”cmdId”:”5dasdfxxxx”
+
+> Connection timeout
+```
+
+2) Send the packet of data as a json object for each command:
+
+      `action` : always use `"sendMessage"`
+
+      `data` : this is the TCP/IP data that the PMS Server expects. See documentation for what to use here.
+
+3) The connection will timeout after 10mins automatically. Ensure to reconnect everytime you go to make the command.
+
+### Try it out now!
+
+The beta version of the PMS SDK is ready for developers to integrate.
+
+
+### Contact
+
+If you're interested in evaluating the PMS SDK, contact this contributor on this repo and it can be setup quite quickly.
+
