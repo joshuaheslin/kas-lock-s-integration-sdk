@@ -122,7 +122,7 @@ Developers: No cost at all. Note: after 30 days of inactivity, the solution infr
 1) Connect to websocket. Example shows connecting by command line but in practise it would be done by your server/browser.
 
 ```
-$ wscat -c ws://echo.websocket.org
+$ wscat -c ws://demo.company.com/hotel
 Connected (press CTRL+C to quit)
 
 < { "action": "SendMessage", "data": "<write_data_here>" }
