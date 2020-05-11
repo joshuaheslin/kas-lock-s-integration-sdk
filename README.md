@@ -149,7 +149,7 @@ Connected (press CTRL+C to quit)
 ### Sample Commands
 
 - Remote Unlock: `9800O|R0102|UAdmin` - Unlocks door "0102"
-- Send Mobile Key: `9800I|R0102|NBill|D202012312399|O202012312399|H+61412345678` - Sends mobile key for room "0102" between start YYYYMMDDhhmm and end YYYYMMDDhhmm to mobile number +61412345678 with name "Bill"
+- Send Mobile Key: `9800I|R0102|NBill|D202012312359|O202012312359|H+61412345678` - Sends mobile key for room "0102" between start YYYYMMDDhhmm and end YYYYMMDDhhmm to mobile number +61412345678 with name "Bill"
 - Checkout Mobile Key: `9800B|H+61412345678` - Will invalidate mobile key for number +6142345678
 - Program RFID Card: `0103I|R103A|NBob|D202012201200|O202012302100` Program guest RFID card for Bob in room "103A"
 
