@@ -140,7 +140,7 @@ Connected (press CTRL+C to quit)
 
 2) Send the packet of data as a json object for each command:
 
-      `action` : always use `"sendMessage"`
+      `action` : always use `"SendMessage"`
 
       `data` : this is the TCP/IP data that the PMS Server expects. See documentation for what to use here.
 
