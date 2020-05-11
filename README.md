@@ -58,6 +58,14 @@ Use the following steps to get started with building an integration with KAS Loc
 [Support Knowledge Base](support.kas.com.au)
 
 
+#### Have questions?
+
+1. First step: [ask KAS](support.kas.com.au) - they can assist with demo lock setup and all things Lock-S Software & PMS server.
+2. Second step: [create an issue on this repo](https://github.com/joshuaheslin/kas-lock-s-integration-sdk/issues) and the contributor will endeavour to answer it.
+
+
+#### Final words
+
 End of instructions to build your own TCP/IP connection interface to Lock-S Software.
 
 <hr>
