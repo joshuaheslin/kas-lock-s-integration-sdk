@@ -67,7 +67,7 @@ Use the following steps to get started with building an integration with KAS Loc
 
 #### Final words
 
-This is the end of the instructions to build your *own* TCP/IP connection interface to Lock-S Software. If you want to integrate to the application but not capabable of port forwarding, just use the [Cloud PMS SDK](#pms-sdk).
+This is the end of the instructions to build your *own* TCP/IP connection interface to Lock-S Software. If you want to integrate to the application but not able to port forward, just use the [Cloud PMS SDK](#pms-sdk).
 
 <hr>
 
