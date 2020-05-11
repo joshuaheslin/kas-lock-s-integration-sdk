@@ -41,11 +41,11 @@ Use the following steps to get started with building an integration with KAS Loc
 
 #### Notes:
 - Lock-S Software, PMS Server and MSSQL must be in same network (on the same computer)
-- KAS normally setup the Lock-S Software, MSSQL, PMS Server on the customers dedicated computer and sets up the doors
-- It is now up to you to integrate with the solution, here are some options for integration:
+- KAS normally setup the Lock-S Software, MSSQL, PMS Server on the customers dedicated computer and sets up the doors for you to interface with.
+- It is now up to you to start your integration workflow, here are some options for integration:
   1. Use port forwarding with firewall rules to host your application somewhere else to communicate with the PMS Server for production.
   2. OR host your integration locally next to the PMS Server as a PC app and connect to your own server using HTTPS API. 
-  3. OR see cloud connection option below...
+  3. OR see [Cloud PMS SDK](#pms-sdk) option below...
 
 #### Minimum Required Software Versions:
 
@@ -61,16 +61,16 @@ Use the following steps to get started with building an integration with KAS Loc
 
 #### Have questions?
 
-1. First step: [ask KAS](support.kas.com.au) - they can assist with demo lock setup and all things Lock-S Software & PMS server.
-2. Second step: [create an issue on this repo](https://github.com/joshuaheslin/kas-lock-s-integration-sdk/issues) and the contributor will endeavour to answer it.
+1. First step: [ask KAS](kas.com.au) - they can assist with demo lock setup and all things Lock-S Software & PMS server.
+2. Second step: [create an issue on this repo](https://github.com/joshuaheslin/kas-lock-s-integration-sdk/issues) and the contributor will endeavour to answer it promptly.
 
 
 #### Final words
 
-End of instructions to build your own TCP/IP connection interface to Lock-S Software.
+This is the end of the instructions to build your *own* TCP/IP connection interface to Lock-S Software. If you want to just use a [Cloud PMS SDK](#pms-sdk).
 
 <hr>
 
-## <a name="pms-sdk"></a> PMS-SDK Cloud Connector App:
+## <a name="pms-sdk"></a> Cloud PMS SDK
 
-Want an easier way to integrate with Lock-S Software? Continue reading...
+Want an easier way to integrate with Lock-S Software? We've come up with the Cloud PMS SDK. Continue reading...
